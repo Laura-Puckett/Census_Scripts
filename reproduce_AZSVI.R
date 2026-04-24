@@ -1,7 +1,5 @@
-# This script follows methods detailed in the Technical Data Documentation for the Arizona Social Vulnerability Index (AZSVI). 
-# The purpose is to recreate some fields from the AZSVI using newer census data (2020-2024). 
-
-library(tidycensus); library(dplyr)
+# The purpose is to recreate some fields from the Arizona Social Vulnerability Index (AZSVI) using newer census data (2020-2024). 
+# This script follows methods detailed in the Technical Data Documentation for AZSVI, which is a product of the Arizona Health Improvement Plan (AzHIP) Data Advisory Committee. 
 
 # ------------------------------------------------#
 # Section 1. Metadata
@@ -35,6 +33,8 @@ library(tidycensus); library(dplyr)
 # ------------------------------------------------#
 # Section 2. Download Data
 # ------------------------------------------------#
+library(tidycensus); library(dplyr); library(sf);
+
 census_variables <- c(
   # SVI
   "DP02_0001E", "DP02_0001M", # HOUSEHOLDS BY TYPE!!Total households
